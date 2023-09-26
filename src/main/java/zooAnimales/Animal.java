@@ -12,11 +12,11 @@ public class Animal {
 	private Zona zona;
 
 	
-	Animal(){
+	public Animal(){
 		totalAnimales ++;
 	}
 	
-	Animal( String nombre, int edad,
+	public Animal( String nombre, int edad,
 			String habitat,String genero){
 		totalAnimales ++;
 		this.nombre = nombre; 
@@ -25,12 +25,12 @@ public class Animal {
 		this.genero  = genero;
 	}
 	
-	String movimiento() {
+	public String movimiento() {
 	
 		return "desplazarse";
 	}
 	
-	String totalPorTipo() {
+	public String totalPorTipo() {
 		return String.format("Mamiferos: %f\nAves: %g\nReptiles: %h\nPeces: %i\nAnfibios: %j",
 				Mamifero.caballos+Mamifero.leones, Ave.aguilas+Ave.halcones,Reptil.iguanas+Reptil.serpientes,
 				Pez.bacalaos+Pez.salmones, Anfibio.ranas+Anfibio.salamandras);

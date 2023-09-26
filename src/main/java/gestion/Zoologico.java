@@ -10,21 +10,21 @@ public class Zoologico {
 	private  ArrayList<Zona> zona = new ArrayList<>();
 
 
-	Zoologico(){
+	public Zoologico(){
 	
 	}
-	Zoologico(String nombre, String ubicacion){
+	public Zoologico(String nombre, String ubicacion){
 		this.setNombre(nombre);
 		this.setUbicacion(ubicacion);
 	}
 	
-	void agregarZonas(Zona zona){
+	public void agregarZonas(Zona zona){
 		this.zona.add(zona);
 		zona.setZoo(this);
 	}
 	
 	
-	static int cantidadTotalAnimales() {
+	public static int cantidadTotalAnimales() {
 		
 		return Animal.getTotalAnimales();
 		
