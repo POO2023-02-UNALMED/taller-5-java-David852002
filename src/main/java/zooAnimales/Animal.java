@@ -4,7 +4,7 @@ import gestion.*;
 
 public class Animal {
 	
-	private static int totalAnimales;
+	private static int totalAnimales = 0;
 	private String nombre;
 	private int edad;
 	private String habitat;
@@ -13,7 +13,7 @@ public class Animal {
 
 	
 	public Animal(){
-		totalAnimales ++;
+		
 	}
 	
 	public Animal( String nombre, int edad,
@@ -31,19 +31,53 @@ public class Animal {
 	}
 	
 	public String totalPorTipo() {
-		return String.format("Mamiferos: %f\nAves: %g\nReptiles: %h\nPeces: %i\nAnfibios: %j",
-				Mamifero.caballos+Mamifero.leones, Ave.aguilas+Ave.halcones,Reptil.iguanas+Reptil.serpientes,
-				Pez.bacalaos+Pez.salmones, Anfibio.ranas+Anfibio.salamandras);
-	}
-	public void setZona(Zona zona) {
-		this.zona = zona;
+		return return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\nAves: "+Ave.cantidadAves()+"\nReptiles: "+Reptil.cantidadReptiles()+"\nPeces: "+Pez.cantidadPeces()+"\nAnfibios: "+Anfibio.cantidadAnfibios();
 	}
 	public String toString(){
 		
-		return String.format("Mi nombre es %a, tengo una edad de %b, habito en %c y mi genero es %d, la zona en la que me ubico es %e, en el %f",
-				nombre, edad, habitat, genero, this.zona.getNombre(), this.zona.getZoo());
+		if (zona==null) {
+			return "Mi nombre es "+this.nombre+", tengo una edad de " +this.edad+", habito en " +this.habitat+" y mi genero es "
+						+this.genero;
+			}
+			else {
+				return "Mi nombre es "+this.nombre+", tengo una edad de " +this.edad+", habito en " +this.habitat+" y mi genero es "
+						+this.genero+", la zona en la que me ubico es " +this.zona.getNombre()+", en el "+((this.zona).getZoo());}
+		}
+	public String getNombre(){
+		return this.nombre;
 	}
-	public static int getTotalAnimales() {
-		return totalAnimales;
+	public void setNombre(String nombre){
+		this.nombre = nombre;
 	}
-}
+	public int getEdad(){
+		return this.edad;
+	}
+	public void setEdad(int edad){
+		this.edad = edad;
+	}
+	public String getHabitat(){
+		return this.habitat;
+	}
+	public void setHabitat(String habitat){
+		this.habitat = habitat;
+	}
+	public String getGenero(){
+		return this.genero;
+	}
+	public void setGenero(String genero){
+		this.genero = genero;
+	}
+	public int getTotalAnimales(){
+		return Animal.totalAnimales;
+	}
+	public void setTotalAnimales(int totalAnimales){
+		Animal.totalAnimales = totalAnimales;
+	}
+	public void setZona(Zona zona){
+		this.zona = zona;
+	}
+
+	
+	}
+	
+
