@@ -27,7 +27,7 @@ public class Zona {
 		return animales.size();
 	}
 	
-	public public Zoologico getZoo() {
+	public Zoologico getZoo() {
 		return zoo;
 	}
 
