@@ -25,11 +25,7 @@ public class Zoologico {
 	
 	
 	public static int cantidadTotalAnimales() {
-		int a = 0;
-		for (Zona zona:zonas){
-			a+= zona.cantidadAnimales();
-		}
-		return a;	
+		return 	zooAnimales.Animal.getTotalAnimales();
 	}
 	public String getUbicacion() {
 		return ubicacion;
