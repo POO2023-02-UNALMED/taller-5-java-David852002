@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Reptil extends Animal{
 	
 	
-	private ArrayList<Reptil> listado = new ArrayList<>();
+	private static ArrayList<Reptil> listado = new ArrayList<>();
 	public static int iguanas;
 	public static int serpientes;
 	private String colorEscamas;
